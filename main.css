@@ -1,6 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;1,400&display=swap");
 * {
   padding: 0;
   margin: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+p {
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Hammersmith One", sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: url("/images/og-card-fallback.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header_droit {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.header_droit h2 {
+  color: white;
+  font-size: 30px;
+  margin-top: 2%;
+}
+.header_droit img {
+  width: 100%;
+  max-width: 500px;
+}
+.header_droit .btn {
+  width: 250px;
+  height: 50px;
+  border: 2px solid white;
+  font-size: 18px;
+  font-family: "Hammersmith One", sans-serif;
+  position: relative;
+  margin-top: 4%;
 }
 
 .hero {
@@ -74,9 +132,10 @@
   box-sizing: border-box;
 }
 .cards_item {
-  flex-basis: 30%;
+  flex-basis: 20%;
   height: 500px;
   min-width: 477px;
+  transition: 1s ease-in-out;
   flex-grow: 1;
   position: relative;
   display: flex;
@@ -85,6 +144,12 @@
   align-items: center;
   flex-wrap: nowrap;
   width: 100%;
+}
+.cards_item:hover {
+  flex-grow: 3;
+}
+.cards_item_content {
+  max-width: 400px;
 }
 .cards_item_content:before {
   position: absolute;

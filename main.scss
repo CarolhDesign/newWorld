@@ -36,12 +36,67 @@
     top:0;
     left:0;
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;1,400&display=swap');
   
   *{
     padding:0;
     margin:0;
+    
   }
-  
+
+  button{
+    background-color: transparent;
+    border:none;
+    color:white;
+  }
+  p{
+    font-family: 'Bai Jamjuree', sans-serif;
+  }
+
+  h1, h2, h3{
+    font-family: 'Hammersmith One', sans-serif;
+  }
+
+  .header{
+    width:100%;
+    height:100vh;
+    background:url('/images/og-card-fallback.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    @include flexbox(row, end, center , wrap );
+
+    &_droit{
+      flex-basis:50%;
+      @include flexbox(column, center , center , wrap );
+      position: relative;
+      h2{
+        color:white;
+        font-size: 30px;
+        margin-top: 2%;
+      }
+      img{
+        width:100%;
+        max-width: 500px;
+      }
+      
+      .btn{
+        width:250px;
+        height:50px;
+        border: 2px solid white;
+        font-size: 18px;
+        font-family: 'Hammersmith One', sans-serif;
+        position: relative;
+        margin-top:4%;
+      }
+    
+    }
+  }
+
+
   .hero{
     width:100%;
     position: relative;
@@ -72,7 +127,7 @@
   
       h2, h3{
         color:wheat;
-        margin-bottom:1%;
+        margin-bottom:1%;    
       }
       p{
         color:lightgray;
@@ -100,16 +155,21 @@
     box-sizing:border-box;
     
     &_item{
-      flex-basis:30%;
+      flex-basis:20%;
       height:500px;
       min-width:477px;
-    flex-grow:1;
+      transition: 1s ease-in-out;
+      flex-grow:1;
       position:relative;
       @include flexbox(column, flex-end, center, nowrap);
       width:100%;
+
+      &:hover{
+        flex-grow:3;
+      }
   
       &_content{
-        
+        max-width:400px;
         &:before{
           @include overlay(0.6);
           z-index:-1;
