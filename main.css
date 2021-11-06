@@ -22,7 +22,7 @@ h1, h2, h3 {
 .header {
   width: 100%;
   height: 100vh;
-  background: url("/images/og-card-fallback.jpg");
+  background: url("images/og-card-fallback.jpg");
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
