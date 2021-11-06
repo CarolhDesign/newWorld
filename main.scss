@@ -176,6 +176,7 @@
         }
         &--2, &--3, &--5 , &--6, &--8, &--9{
           display:none;
+          transition: all 4s ease-in-out;
         }
       }
   
@@ -220,23 +221,28 @@
     .bubble{
       width:100%;
       @include flexbox(row,center,center,nowrap);
-      
-      span{
+      transition: all 4s ease-in-out;
+            span{
       @include bubble(lightgray,10px);
+      transition: all 4s ease-in-out;
+
       }
       
     }
   
     .card_item_1{
       @include background("https://www.warlegend.net/wp-content/uploads/New-World_-Launch-Trailer-1-12-screenshot-scaled.jpg");
+      transition: all 2s ease-in-out;
     }
     
     .card_item_2{
       @include background("https://www.geekgeneration.fr/wp-content/uploads/2020/05/New-World-Spriggan_hero_mist_720.jpg");
+      transition: all 2s ease-in-out;
     }
     
     .card_item_3{
       @include background("https://images.ctfassets.net/j95d1p8hsuun/302v7wNGLEDkNDjMLsODDA/f36f0cc3a541aa69feac13677acf3b60/NW_News_Gen_01_740x416.jpg");
+      transition: all 2s ease-in-out;
     }
   }
   

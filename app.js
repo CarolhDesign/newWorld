@@ -30,7 +30,7 @@ function bubbleShow9()
     content9.style.display = "block";
     content8.style.display = "none";
     content7.style.display = "none";
-    bubble9.style.transition = "2s ease";
+    bubble9.style.transition = "1s ease-in-out";
     bubble8.style.backgroundColor = "lightgray";
     bubble7.style.backgroundColor = "lightgray";
 }
@@ -42,7 +42,7 @@ function bubbleShow8()
     content8.style.display = "block";
     content9.style.display = "none";
     content7.style.display = "none";
-    bubble8.style.transition = "2s ease";
+    bubble8.style.transition = "1s ease-in-out";
     bubble9.style.backgroundColor = "lightgray";
     bubble7.style.backgroundColor = "lightgray";
 }
@@ -54,7 +54,7 @@ function bubbleShow7()
     content7.style.display = "block";
     content8.style.display = "none";
     content9.style.display = "none";
-    bubble7.style.transition = "2s ease";
+    bubble7.style.transition = "1s ease-in-out";
     bubble8.style.backgroundColor = "lightgray";
     bubble9.style.backgroundColor = "lightgray";
 }
@@ -66,7 +66,7 @@ function bubbleShow6()
     content6.style.display = "block";
     content5.style.display = "none";
     content4.style.display = "none";
-    bubble6.style.transition = "2s ease";
+    bubble6.style.transition = "1s ease-in-out";
     bubble5.style.backgroundColor = "lightgray";
     bubble4.style.backgroundColor = "lightgray";
 }
@@ -78,7 +78,7 @@ function bubbleShow5()
     content5.style.display = "block";
     content4.style.display = "none";
     content6.style.display = "none";
-    bubble5.style.transition = "2s ease";
+    bubble5.style.transition = "1s ease-in-out";
     bubble4.style.backgroundColor = "lightgray";
     bubble6.style.backgroundColor = "lightgray";
 }
@@ -90,7 +90,7 @@ function bubbleShow4()
     content4.style.display = "block";
     content5.style.display = "none";
     content6.style.display = "none";
-    bubble4.style.transition = "2s ease";
+    bubble4.style.transition = "1s ease-in-out";
     bubble5.style.backgroundColor = "lightgray";
     bubble6.style.backgroundColor = "lightgray";
 }
@@ -102,7 +102,7 @@ function bubbleShow3()
     content3.style.display = "block";
     content1.style.display = "none";
     content2.style.display = "none";
-    bubble3.style.transition = "2s ease";
+    bubble3.style.transition = "1s ease-in-out";
     bubble2.style.backgroundColor = "lightgray";
     bubble1.style.backgroundColor = "lightgray";
 }
@@ -114,7 +114,7 @@ function bubbleShow2()
     content2.style.display = "block";
     content1.style.display = "none";
     content3.style.display = "none";
-    bubble2.style.transition = "2s ease";
+    bubble2.style.transition = "1s ease-in-out";
     bubble3.style.backgroundColor = "lightgray";
     bubble1.style.backgroundColor = "lightgray";
 }
@@ -126,7 +126,7 @@ function bubbleShow1()
     content1.style.display = "block";
     content2.style.display = "none";
     content3.style.display = "none";
-    bubble1.style.transition = "2s ease";
+    bubble1.style.transition = "1s ease-in-out";
     bubble2.style.backgroundColor = "lightgray";
     bubble3.style.backgroundColor = "lightgray";
 }
@@ -136,7 +136,7 @@ function bgcover1(url)
     cardItem1.style.background = "url('" + url + "')";
     cardItem1.style.backgroundPosition = "center center";
     cardItem1.style.backgroundSize = "cover";
-    cardItem1.style.transition = "2s ease";
+    cardItem1.style.transition = "2s ease-in-out";
 }
 
 function bgcover2(url)
@@ -144,7 +144,7 @@ function bgcover2(url)
     cardItem2.style.background = "url('" + url + "')";
     cardItem2.style.backgroundPosition = "center center";
     cardItem2.style.backgroundSize = "cover";
-    cardItem2.style.transition = "2s ease";
+    cardItem2.style.transition = "2s ease-in-out";
 }
 
 function bgcover3(url)
@@ -152,5 +152,5 @@ function bgcover3(url)
     cardItem3.style.background = "url('" + url + "')";
     cardItem3.style.backgroundPosition = "center center";
     cardItem3.style.backgroundSize = "cover";
-    cardItem3.style.transition = "2s ease";
+    cardItem3.style.transition = "2s ease-in-out";
 }
