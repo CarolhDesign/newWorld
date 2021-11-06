@@ -1,0 +1,182 @@
+@mixin flexbox($dir, $just, $align, $wrap){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $align;
+    flex-wrap : $wrap;
+  }
+  
+  @mixin background($url){
+    width:100%;
+    background-image : url($url);
+    background-size:cover;
+    background-position: center center;
+    z-index: 0;
+  }
+  
+  
+  @mixin bubble($color, $size){
+        border-radius:50px;
+        display:block;
+        width:$size;
+        height:$size;
+        background:$color;
+        color:$color;
+        margin-left:10px;
+        margin-bottom:10px;
+  }
+  
+  @mixin overlay($opacity){
+    position:absolute;
+    width:100%;
+    height:100%;
+    background: black;
+    opacity: $opacity;
+    content:"";
+    top:0;
+    left:0;
+  }
+  
+  *{
+    padding:0;
+    margin:0;
+  }
+  
+  .hero{
+    width:100%;
+    position: relative;
+    background:url('https://zupimages.net/up/21/44/ur7k.png');
+    min-height:600px;
+    background-position: center center;
+    background-size: cover;
+    @include flexbox(row,space-around , baseline , wrap );
+    &:before{
+      @include overlay(0.7);
+    }
+  
+    .gauche{
+      flex-basis: 60%;
+    }
+  
+  
+    .droit{
+      @include flexbox(column, start, start , wrap );
+      flex-basis:40%;
+      padding:4%;
+      box-sizing: border-box;
+      z-index:999;
+  
+      h2{
+        font-size:30px;
+      }
+  
+      h2, h3{
+        color:wheat;
+        margin-bottom:1%;
+      }
+      p{
+        color:lightgray;
+        line-height: 30px;
+        font-size:14px;
+      }
+  
+      .list{
+  position: relative;
+        img{
+          flex-basis:10%;
+          width:10px;
+          position:absolute;
+          left:-3%;
+          margin-top: 2%;
+        }
+      }
+    }
+  }
+  
+  .cards{
+    width:100%;
+    @include flexbox(row,center,center,wrap);
+    background-color: black;
+    box-sizing:border-box;
+    
+    &_item{
+      flex-basis:30%;
+      height:500px;
+      min-width:477px;
+    flex-grow:1;
+      position:relative;
+      @include flexbox(column, flex-end, center, nowrap);
+      width:100%;
+  
+      &_content{
+        
+        &:before{
+          @include overlay(0.6);
+          z-index:-1;
+        }
+        &--2, &--3, &--5 , &--6, &--8, &--9{
+          display:none;
+        }
+      }
+  
+      &_footer{
+        @include flexbox(row,center ,center , nowrap );
+        width:100%;
+        max-height:120px;
+        background-color: black;
+        box-sizing: border-box;
+        padding:2%;
+  
+        img{
+          width:100%;
+          max-width:70px;
+          margin-right:20px;
+          margin-left:20px;
+  
+        }
+      }
+  
+      h3{text-align:center;}
+  
+    }
+    
+    h2{
+      color:wheat;
+      font-size:2em;
+    }
+    
+    h3{
+      color:wheat;
+    }
+    
+    p{
+      color:lightgray;
+      margin-top: -10px;
+      padding: 5%;
+      font-size: 14px;
+      text-align:center;
+    }
+    
+    .bubble{
+      width:100%;
+      @include flexbox(row,center,center,nowrap);
+      
+      span{
+      @include bubble(lightgray,10px);
+      }
+      
+    }
+  
+    .card_item_1{
+      @include background("https://www.warlegend.net/wp-content/uploads/New-World_-Launch-Trailer-1-12-screenshot-scaled.jpg");
+    }
+    
+    .card_item_2{
+      @include background("https://www.geekgeneration.fr/wp-content/uploads/2020/05/New-World-Spriggan_hero_mist_720.jpg");
+    }
+    
+    .card_item_3{
+      @include background("https://images.ctfassets.net/j95d1p8hsuun/302v7wNGLEDkNDjMLsODDA/f36f0cc3a541aa69feac13677acf3b60/NW_News_Gen_01_740x416.jpg");
+    }
+  }
+  
