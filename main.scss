@@ -148,6 +148,27 @@
     }
   }
   
+  .prime{
+    width:100%;
+    @include flexbox(row, end, center, wrap );
+    background:url('./images/ss_48edbca73ba970cfcb4798820068e8171bdeb6ac.1920x1080\ copy.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    min-height:350px;
+    box-sizing: border-box;
+    padding: 3%;
+    color:lightgray;
+
+    h3{
+      color:wheat;
+    }
+
+    h2{
+      font-size: 36px;
+    }
+  }
+
+  
   .cards{
     width:100%;
     @include flexbox(row,center,center,wrap);
